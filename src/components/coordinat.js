@@ -7,7 +7,7 @@ import {addCoordinatCreator} from '../redux/action/coordinat';
 const Coordinat = () => {
   const {coordinat} = useSelector((state) => state);
   const dispatch = useDispatch();
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
 
   const show = () => {
     setVisible(!visible);
