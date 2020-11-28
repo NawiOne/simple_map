@@ -17,15 +17,7 @@ const TopMenu = () => {
   return (
     <>
       <View style={style.container}>
-        <Text style={{fontWeight: 'bold', fontSize: 20, color: 'black'}}>
-          My Map
-        </Text>
-        <Icon
-          name="dots-three-vertical"
-          size={23}
-          color="black"
-          onPress={() => show()}
-        />
+        <Icon name="menu" size={30} color="black" onPress={() => show()} />
       </View>
       <Overlay
         isVisible={visible}
@@ -56,20 +48,22 @@ const TopMenu = () => {
 
 const style = StyleSheet.create({
   container: {
-    width: '100%',
+    width: '30%',
+    alignSelf: 'flex-end',
     flexDirection: 'row',
     alignItems: 'center',
     paddingRight: 23,
     paddingLeft: 23,
+    // marginTop: 15,
     height: 50,
-    justifyContent: 'space-between',
-    backgroundColor: 'white',
+    justifyContent: 'flex-end',
+    backgroundColor: 'transparent',
   },
   overlay: {
     position: 'absolute',
-    top: 50,
-    right: '10%',
-    width: '40%',
+    top: 40,
+    right: 28,
+    width: '60%',
     paddingBottom: '40%',
   },
   backdrop: {
