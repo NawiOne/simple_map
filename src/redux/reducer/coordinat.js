@@ -1,21 +1,21 @@
 import {actionType} from '../action/actionType';
 
 const initialState = {
-  listCoordinat: [],
-  curentCoordinat: {},
+  listCoordinate: [],
+  curentCoordinate: {},
 };
 
 const coordinate = (state = initialState, {type, payload}) => {
   switch (type) {
-    case actionType.getCoodinat:
+    case actionType.getCoodinate:
       return {
         ...state,
-        curentCoordinat: payload,
+        curentCoordinate: payload,
       };
-    case actionType.addCoordinat:
+    case actionType.addCoordinate:
       return {
         ...state,
-        listCoordinat: state.listCoordinat.concat(payload),
+        listCoordinate: state.listCoordinate.concat(payload),
       };
     default:
       return state;

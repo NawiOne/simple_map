@@ -7,7 +7,7 @@ import {getCoordinatCreator} from '../redux/action/coordinat';
 import markerLogo from '../asset/img/marker.png';
 
 const Map = () => {
-  const {coordinat} = useSelector((state) => state);
+  const {coordinate} = useSelector((state) => state);
   const [region, setRegion] = useState({
     latitude: -6.884831231113922,
     longitude: 108.7806924059987,
@@ -52,9 +52,9 @@ const Map = () => {
             ),
           );
         }}>
-        {coordinat.listCoordinat.length === 0
+        {coordinate.listCoordinate.length === 0
           ? null
-          : coordinat.listCoordinat.map((item, index) => {
+          : coordinate.listCoordinate.map((item, index) => {
               return (
                 <Marker
                   key={index}

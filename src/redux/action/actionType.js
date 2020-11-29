@@ -1,4 +1,4 @@
 export const actionType = {
-  getCoodinat: 'GET_COORDINAT',
-  addCoordinat: 'ADD_COORDINAT',
+  getCoodinate: 'GET_COORDINAT',
+  addCoordinate: 'ADD_COORDINAT',
 };

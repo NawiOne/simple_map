@@ -1,8 +1,8 @@
 import {combineReducers} from 'redux';
-import coordinatReducer from './coordinat';
+import coordinateReducer from './coordinat';
 
 const indexReducer = combineReducers({
-  coordinat: coordinatReducer,
+  coordinate: coordinateReducer,
 });
 
 export default indexReducer;

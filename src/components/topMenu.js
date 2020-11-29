@@ -6,7 +6,7 @@ import {Overlay} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/Entypo';
 
 const TopMenu = () => {
-  const {coordinat} = useSelector((state) => state);
+  const {coordinate} = useSelector((state) => state);
   const [visible, setVisible] = useState(false);
   const dispatch = useDispatch();
 
@@ -30,10 +30,8 @@ const TopMenu = () => {
             onPress={() => {
               dispatch(
                 addCoordinatCreator(
-                  coordinat.curentCoordinat.latitude,
-                  coordinat.curentCoordinat.longitude,
-                  coordinat.curentCoordinat.latDelta,
-                  coordinat.curentCoordinat.longDelta,
+                  coordinate.curentCoordinate.latitude,
+                  coordinate.curentCoordinate.longitude,
                 ),
               );
               setVisible(!visible);
@@ -54,7 +52,6 @@ const style = StyleSheet.create({
     alignItems: 'center',
     paddingRight: 23,
     paddingLeft: 23,
-    // marginTop: 15,
     height: 50,
     justifyContent: 'flex-end',
     backgroundColor: 'transparent',

@@ -5,7 +5,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {addCoordinatCreator} from '../redux/action/coordinat';
 
 const Coordinat = () => {
-  const {coordinat} = useSelector((state) => state);
+  const {coordinate} = useSelector((state) => state);
   const dispatch = useDispatch();
   const [visible, setVisible] = useState(false);
 
@@ -16,10 +16,10 @@ const Coordinat = () => {
   return (
     <>
       <View style={style.container}>
-        {coordinat.curentCoordinat.latitude === undefined ? null : (
-          <Text style={style.coordinat} onPress={() => show()}>
-            {coordinat.curentCoordinat.latitude},
-            {coordinat.curentCoordinat.longitude}
+        {coordinate.curentCoordinate.latitude === undefined ? null : (
+          <Text style={style.coordinate} onPress={() => show()}>
+            {coordinate.curentCoordinate.latitude},
+            {coordinate.curentCoordinate.longitude}
           </Text>
         )}
       </View>
@@ -33,10 +33,8 @@ const Coordinat = () => {
             onPress={() => {
               dispatch(
                 addCoordinatCreator(
-                  coordinat.curentCoordinat.latitude,
-                  coordinat.curentCoordinat.longitude,
-                  coordinat.curentCoordinat.latDelta,
-                  coordinat.curentCoordinat.longDelta,
+                  coordinate.curentCoordinate.latitude,
+                  coordinate.curentCoordinate.longitude,
                 ),
               );
               setVisible(!visible);
@@ -62,7 +60,7 @@ const style = StyleSheet.create({
     padding: 10,
     borderRadius: 20,
   },
-  coordinat: {
+  coordinate: {
     color: 'black',
     fontSize: 10,
   },

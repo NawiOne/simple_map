@@ -2,7 +2,7 @@ import {actionType} from './actionType';
 
 export const getCoordinatCreator = (latitude, longitude) => {
   return {
-    type: actionType.getCoodinat,
+    type: actionType.getCoodinate,
     payload: {
       latitude,
       longitude,
@@ -12,7 +12,7 @@ export const getCoordinatCreator = (latitude, longitude) => {
 
 export const addCoordinatCreator = (latitude, longitude) => {
   return {
-    type: actionType.addCoordinat,
+    type: actionType.addCoordinate,
     payload: {
       latitude,
       longitude,
